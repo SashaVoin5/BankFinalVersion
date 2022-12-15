@@ -1,0 +1,36 @@
+﻿<Window x:Class="Bank.authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank"
+        mc:Ignorable="d"
+        Title="authorization" Height="270" Width="300">
+    <Grid>
+        <Label Content="Авторизация" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="43,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="43,104,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txb_login" HorizontalAlignment="Left" Margin="43,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="{x:Null}" Foreground="#FF535353" TextChanged="TextBox_TextChanged" MouseDown="txb_login_MouseDown" MouseLeftButtonDown="txb_login_MouseLeftButtonDown">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2C7DE0" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.914"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="txt_pass" HorizontalAlignment="Left" Margin="43,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="{x:Null}" Foreground="#FF535353" TextChanged="txt_pass_TextChanged">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2C7DE0" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.914"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="btn_login" Content="Вход" HorizontalAlignment="Left" Margin="65,194,0,0" VerticalAlignment="Top" Width="160" Background="#FF2C7DE0" Foreground="White" Click="btn_login_Click">
+            <Button.Effect>
+                <DropShadowEffect Direction="173" BlurRadius="5" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>
